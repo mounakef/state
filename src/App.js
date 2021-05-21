@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react'
+import "./App.css"
 
  class App extends Component { 
   constructor (props) {
@@ -14,7 +15,7 @@ import React, { Component } from 'react'
         
   },
   count:0 ,
-  }
+  }}
   handleShow = () => {
     this.setState({
       ...this.state,
@@ -33,13 +34,13 @@ import React, { Component } from 'react'
 
   render() {
     return (
-      <div className = "app">
+      <div className = "App">
       {this.state.show && 
         <>
         <h1>  {this.state.person.FullName }</h1>
         <h1>  {this.state.person.Bio }</h1>
         <h1>  {this.state.person.Profession} </h1>
-        <img src={this.state.person.Imgsrc} alt=''/>
+        <img style={{maxWidth:"200px"}} src={this.state.person.Imgsrc} alt=''/>
         <h1> {this.state.count}</h1>
         </>
 
